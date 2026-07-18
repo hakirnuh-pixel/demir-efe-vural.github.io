@@ -421,6 +421,8 @@
 
   /* ============ DONATION ============ */
   .donate-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; align-items: stretch; }
+  .donate-grid.intl-donate-grid { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 700px) { .donate-grid.intl-donate-grid { grid-template-columns: 1fr; } }
   .iban-card {
     background: var(--primary); color: #fff; border-radius: var(--radius-lg);
     padding: 38px; position: relative; overflow: hidden;
@@ -809,7 +811,7 @@
         <h2>Türkiye dışından bağış yapmak isteyenler için</h2>
         <p>Yurt dışında yaşayan bağışçılarımız GoFundMe veya PayPal üzerinden de Demir Efe'ye destek olabilir.</p>
       </div>
-      <div class="donate-grid" style="grid-template-columns: 1fr 1fr;">
+      <div class="donate-grid intl-donate-grid">
         <div class="qr-card reveal">
           <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fgofund.me%2F4fe62a5aa" alt="GoFundMe Bağış QR Kodu" loading="lazy">
           <h3 style="margin-bottom:8px;">GoFundMe</h3>
@@ -923,9 +925,13 @@
 
       <div class="section-head center reveal" style="margin-top:56px;margin-left:auto;margin-right:auto;">
         <span class="eyebrow">Yazılı Basında Demir Efe</span>
-        <h3 style="font-size:1.15rem;">"Tarık Şeker ile Kalemşor" programından hayati çağrı, ulusal ve yerel haber sitelerinde de yer aldı</h3>
+        <h3 style="font-size:1.15rem;">Demir Efe'nin hikayesi, ulusal ve yerel haber sitelerinde de yer aldı</h3>
       </div>
       <div class="news-links reveal">
+        <a class="news-link-item" href="https://www.dha.com.tr/yerel-haberler/izmir/izmir-smali-demir-efe-gelecek-bayramlari-d-2841330" target="_blank" rel="noopener">
+          <span class="news-link-source">DHA</span>
+          <span class="news-link-title">"Gelecek bayramları daha iyi görsün" →</span>
+        </a>
         <a class="news-link-item" href="https://x.com/i/status/2077673433555517948" target="_blank" rel="noopener">
           <span class="news-link-source">X (Twitter)</span>
           <span class="news-link-title">Demir Efe için paylaşım →</span>
