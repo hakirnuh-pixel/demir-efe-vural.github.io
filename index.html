@@ -576,6 +576,22 @@
   .press-fallback:hover { text-decoration: underline; }
   @media (max-width: 900px) { .press-grid { grid-template-columns: 1fr; } }
 
+  .news-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+  .news-link-item {
+    display: flex; flex-direction: column; gap: 4px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 16px 18px; box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .news-link-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .news-link-source {
+    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--primary-2); font-weight: 700;
+  }
+  .news-link-title { font-size: 0.86rem; color: var(--text-muted); font-weight: 600; }
+  @media (max-width: 900px) { .news-links { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .news-links { grid-template-columns: 1fr; } }
+
   /* ============ CAMPAIGN PHOTOS GALLERY ============ */
   .camp-gallery {
     display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 180px;
@@ -787,6 +803,26 @@
           <p>Bankacılık uygulamanızdaki kamera / QR ile ödeme özelliğini kullanarak IBAN bilgisini hızlıca aktarabilirsiniz.</p>
         </div>
       </div>
+
+      <div class="section-head reveal" style="margin-top:56px;">
+        <span class="eyebrow">Yurt Dışından Bağış</span>
+        <h2>Türkiye dışından bağış yapmak isteyenler için</h2>
+        <p>Yurt dışında yaşayan bağışçılarımız GoFundMe veya PayPal üzerinden de Demir Efe'ye destek olabilir.</p>
+      </div>
+      <div class="donate-grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="qr-card reveal">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fgofund.me%2F4fe62a5aa" alt="GoFundMe Bağış QR Kodu" loading="lazy">
+          <h3 style="margin-bottom:8px;">GoFundMe</h3>
+          <p style="margin-bottom:18px;">SMA DMD KIDS Stichting'in resmi GoFundMe kampanyası "Demir Efe ~ Hope ~ Stronger Together" üzerinden bağış yapabilirsiniz.</p>
+          <a href="https://gofund.me/4fe62a5aa" target="_blank" rel="noopener" class="btn btn-primary">GoFundMe'de Bağış Yap</a>
+        </div>
+        <div class="qr-card reveal">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fwww.paypal.com%2Fdonate%3Fcampaign_id%3D45RUSMGLBMJTC" alt="PayPal Bağış QR Kodu" loading="lazy">
+          <h3 style="margin-bottom:8px;">PayPal</h3>
+          <p style="margin-bottom:18px;">PayPal hesabınız üzerinden hızlı ve güvenli şekilde bağış yapabilirsiniz.</p>
+          <a href="https://www.paypal.com/donate?campaign_id=45RUSMGLBMJTC" target="_blank" rel="noopener" class="btn btn-primary">PayPal ile Bağış Yap</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -883,6 +919,49 @@
           </div>
           <a class="press-fallback" href="https://www.instagram.com/reel/DW1EeksjG9F/" target="_blank" rel="noopener">Instagram'da izle →</a>
         </div>
+      </div>
+
+      <div class="section-head center reveal" style="margin-top:56px;margin-left:auto;margin-right:auto;">
+        <span class="eyebrow">Yazılı Basında Demir Efe</span>
+        <h3 style="font-size:1.15rem;">"Tarık Şeker ile Kalemşor" programından hayati çağrı, ulusal ve yerel haber sitelerinde de yer aldı</h3>
+      </div>
+      <div class="news-links reveal">
+        <a class="news-link-item" href="https://x.com/i/status/2077673433555517948" target="_blank" rel="noopener">
+          <span class="news-link-source">X (Twitter)</span>
+          <span class="news-link-title">Demir Efe için paylaşım →</span>
+        </a>
+        <a class="news-link-item" href="https://boruturk.com/2026/07/16/tarik-seker-ile-kalemsor-programindan-hayati-cagri-sma-hastasi-demir-efe-icin-zaman-daraliyor/" target="_blank" rel="noopener">
+          <span class="news-link-source">Börü Türk</span>
+          <span class="news-link-title">Hayati çağrı: Zaman daralıyor →</span>
+        </a>
+        <a class="news-link-item" href="https://xn--brhaber-90a9c.com/tarik-seker-ile-kalemsor-programindan-hayati-cagri-sma-hastasi-demir-efe-icin-zaman-daraliyor/" target="_blank" rel="noopener">
+          <span class="news-link-source">Bürhaber</span>
+          <span class="news-link-title">Hayati çağrı: Zaman daralıyor →</span>
+        </a>
+        <a class="news-link-item" href="https://www.erajans.com.tr/tarik-seker-ile-kalemsor-programindan-hayati-cagri-sma-hastasi-demir-efe-icin-zaman-daraliyor/" target="_blank" rel="noopener">
+          <span class="news-link-source">Erajans</span>
+          <span class="news-link-title">Hayati çağrı: Zaman daralıyor →</span>
+        </a>
+        <a class="news-link-item" href="https://atlashbr.com/tarik-seker-ile-kalemsor-programindan-hayati-cagri-sma-hastasi-demir-efe-icin-zaman-daraliyor/" target="_blank" rel="noopener">
+          <span class="news-link-source">Atlas Haber</span>
+          <span class="news-link-title">Hayati çağrı: Zaman daralıyor →</span>
+        </a>
+        <a class="news-link-item" href="https://www.bayrakhaber.com/2026/07/16/tarik-seker-ile-kalemsor-programindan-hayati-cagri-sma-hastasi-demir-efe-icin-zaman-daraliyor/" target="_blank" rel="noopener">
+          <span class="news-link-source">Bayrak Haber</span>
+          <span class="news-link-title">Hayati çağrı: Zaman daralıyor →</span>
+        </a>
+        <a class="news-link-item" href="https://www.zirvedehaber.com/2026/07/16/tarik-seker-ile-kalemsor-programindan-hayati-cagri-sma-hastasi-demir-efe-icin-zaman-daraliyor/" target="_blank" rel="noopener">
+          <span class="news-link-source">Zirvede Haber</span>
+          <span class="news-link-title">Hayati çağrı: Zaman daralıyor →</span>
+        </a>
+        <a class="news-link-item" href="https://demokratzafer.com/tarik-seker-ile-kalemsor-programindan-hayati-cagri-sma-hastasi-demir-efe-icin-zaman-daraliyor/" target="_blank" rel="noopener">
+          <span class="news-link-source">Demokrat Zafer</span>
+          <span class="news-link-title">Hayati çağrı: Zaman daralıyor →</span>
+        </a>
+        <a class="news-link-item" href="https://www.bursaant.com/tarik-seker-ile-kalemsor-programindan-hayati-cagri-sma-hastasi-demir-efe-icin-zaman-daraliyor/" target="_blank" rel="noopener">
+          <span class="news-link-source">Bursa Ant</span>
+          <span class="news-link-title">Hayati çağrı: Zaman daralıyor →</span>
+        </a>
       </div>
     </div>
   </section>
